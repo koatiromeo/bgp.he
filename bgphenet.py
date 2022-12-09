@@ -41,7 +41,9 @@ finally:
                 if x != None:
                     ANSandIP["AS"].append(tag_alex.text)
                 else:
-                    ANSandIP["IP"].append(tag_alex.text)
+                    aa=re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$",tag_alex.text)
+                    if aa != None:
+                        ANSandIP["IP"].append(tag_alex.text)
         
 
         with open("bgpas.txt", "a+") as myfile:
