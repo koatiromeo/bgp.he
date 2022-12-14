@@ -47,13 +47,11 @@ finally:
         
 
         with open("bgpas.txt", "a+") as myfile:
-            myfile.write("begindomaine:" + sys.argv[1] + "\n")
             myfile.write("\n".join(ANSandIP["AS"]))
 
 
 
         with open("bgpip.txt", "a+") as myfile:
-            myfile.write("begindomaine:" + sys.argv[1] + "\n")
             myfile.write("\n".join(ANSandIP["IP"]))
 
         driver.quit()
